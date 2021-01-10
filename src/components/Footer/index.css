@@ -1,0 +1,21 @@
+.footer {
+    background:#FFE207; 
+    display: inline-block !important;
+    position: fixed;
+    max-height: 200px;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    min-height:50px; 
+    align-items: center;
+    margin-top: 40px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    border-top: 1.5px solid #585858;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0 auto;
+    color:#585858 ;
+}

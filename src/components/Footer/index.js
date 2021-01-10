@@ -1,7 +1,9 @@
+import "./index.css";
+
 function Footer() {
     return (
-      <div className="App">
-        <h1>footer</h1>
+      <div className="footer">
+        <p>  © {new Date().getFullYear()} Design Books - Todos os direitos reservados</p>
       </div>
     );
   }

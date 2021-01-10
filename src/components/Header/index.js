@@ -16,8 +16,8 @@ function Header() {
             </button>
           </Link>
             </li>
-            <li>
-              <a href="#">Design Books</a>
+            <li> 
+              <a href="#" style={{borderBottom: '1px solid #585858'}}>Design Books</a>
             </li>
             <li>
                 <img className="finder" src={finder} />

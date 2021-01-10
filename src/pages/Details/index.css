@@ -1,0 +1,107 @@
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.container-sales {
+    display: grid;
+    grid-template-columns: 250px, 1fr;
+    max-width: 600px;
+    padding: 20px;
+    gap: 15px;
+    background:#FFE207;
+    grid-template-areas: 
+        "thumbnail title title"
+        "thumbnail authors authors"
+        "thumbnail container-price container-price"        
+        "pages container-buy container-buy";
+}
+
+.thumbnail {
+    grid-area: thumbnail;
+}
+
+.pages {
+    grid-area: pages;
+    margin: 0 auto;
+    align-self: center;
+    color: #ab9e38;
+    font-size: 1.2em;
+}
+
+.title {
+    grid-area: title;
+}
+
+.authors {
+    font-size: 1.2em;
+    color: 	#808080;
+    grid-area: authors;
+}
+
+.container-price {
+    grid-template-columns: repeat(2, 100px);
+    grid-area: container-price;
+    display: grid;
+    grid-template-areas: 
+    "price ratting";
+}
+
+
+.price {
+    grid-area: price;
+    font-size: 1.700em;
+}
+
+.ratting {
+    grid-area:ratting;
+}
+
+.container-buy {
+    grid-template-columns: repeat(2, 130px);
+    grid-area: container-buy;
+    display: grid;
+    grid-template-areas: 
+    "... buy like";
+    height: 43px;
+}
+
+.buy {
+    grid-area: buy;
+    background: #549AE6;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    /* justify-self: end; */
+    /* max-height: 50px; */
+}
+
+.like {
+    grid-area: like;
+    background: transparent;
+    border: none;
+    background: #E05568;
+    max-height: 40px;
+    max-width: 45px;
+    border-radius: 50px;
+    /* border-radius: 30%; */
+}
+
+.like svg {
+    fill: #ffffff;
+    border: none;
+    font-size: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.details-book {
+    background: #ffffff;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.details-book p {
+    margin: 0 auto;
+    color: #484848;
+}

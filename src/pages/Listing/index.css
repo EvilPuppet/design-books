@@ -1,0 +1,25 @@
+ 
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.bookList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    list-style: none;
+}
+
+.bookList li {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.bookList img {
+    align-self: center;
+    max-width: 250px;
+  }
