@@ -2,7 +2,7 @@ import React from "react";
 
 function Listing() {
     return (
-      <div className="App">
+      <div className="">
          <h1>Listing</h1>
       </div>
     );

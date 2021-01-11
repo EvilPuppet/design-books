@@ -1,0 +1,62 @@
+.header {
+    background:#FFE207; 
+    display:flex;
+    padding: 20px;
+    width: 100%;
+ 
+}
+
+
+nav {
+    display:flex;
+    justify-content:center;
+}
+
+ul {
+    margin:0 auto;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+
+
+nav li  {
+    list-style: none;
+    text-decoration: none;
+    display: inline;
+ }
+ 
+ nav li a {
+    color:#585858 ;
+    font-size: 1.525em;
+    text-decoration: none;
+ }
+
+
+ .finder {
+    width: 30px;  
+    height: 30px;
+ }
+
+.burger {
+    width: 2rem;
+    height: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+
+.risk {
+    width: 2rem;
+    height: 0.25rem;
+    background: #000000;
+    border-radius: 10px;
+    transform-origin: 1px;
+}
