@@ -22,7 +22,7 @@ function Details(props) {
     return (
       <div className="container">
         <div className="container-sales">
-            <img className="thumbnail" src={book.volumeInfo?.imageLinks?.large} />
+            <img className="thumbnail" src={book.volumeInfo?.imageLinks?.thumbnail} />
             <small className="pages">{book.volumeInfo?.pageCount} pages</small>
             <h1 className="title">{book.volumeInfo?.title}</h1>
             <small className="authors">by {book.volumeInfo?.authors[0]}</small>

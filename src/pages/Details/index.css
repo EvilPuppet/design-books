@@ -14,7 +14,7 @@
         "thumbnail title title"
         "thumbnail authors authors"
         "thumbnail container-price container-price"        
-        "pages container-buy container-buy";
+        "pages container-buy  container-buy";
 }
 
 .thumbnail {
@@ -26,31 +26,33 @@
     margin: 0 auto;
     align-self: center;
     color: #ab9e38;
-    font-size: 1.2em;
+    width: 60px;
+    font-size: 0.8em;
 }
 
 .title {
     grid-area: title;
+    font-size: 1.5em;
 }
 
 .authors {
-    font-size: 1.2em;
+    font-size: 1em;
     color: 	#808080;
     grid-area: authors;
 }
 
 .container-price {
-    grid-template-columns: repeat(2, 100px);
     grid-area: container-price;
     display: grid;
     grid-template-areas: 
-    "price ratting";
+    "price price ratting";
+    grid-template-columns: repeat(2, 100px);
 }
 
 
 .price {
     grid-area: price;
-    font-size: 1.700em;
+    font-size: 1.400em;
 }
 
 .ratting {
@@ -58,12 +60,13 @@
 }
 
 .container-buy {
-    grid-template-columns: repeat(2, 130px);
+    grid-template-columns: repeat(2, 100px);
     grid-area: container-buy;
     display: grid;
     grid-template-areas: 
     "... buy like";
     height: 43px;
+    gap: 5px;
 }
 
 .buy {
@@ -71,6 +74,7 @@
     background: #549AE6;
     color: #ffffff;
     border: none;
+    width: 100px;
     border-radius: 50px;
     /* justify-self: end; */
     /* max-height: 50px; */
