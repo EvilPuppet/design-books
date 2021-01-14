@@ -6,6 +6,16 @@
  
 }
 
+.goBack {
+    border: none;
+    background: transparent;
+}
+
+.goBack img {
+    width: 32px;
+    height: 32px;
+}
+
 
 nav {
     display:flex;

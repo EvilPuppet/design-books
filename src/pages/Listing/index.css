@@ -1,14 +1,16 @@
  
 
-.container {
+.container-listing {
     margin: 0 auto;
     max-width: 900px;
+    min-height: 100%;
+    background:#FFE207; 
 }
 
 .bookList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -21,5 +23,20 @@
 
 .bookList img {
     align-self: center;
-    max-width: 250px;
-  }
+    display: block;
+    max-width: 100%;
+}
+
+.container-button {
+    display: grid;
+    padding: 30px;
+}
+
+.load-more {
+    background: #3377FF ;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin: 0 auto;
+}

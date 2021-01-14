@@ -3,25 +3,41 @@ import { Link } from "react-router-dom";
 import api from "../../service/api";
 import './index.css';
 
-function Listing() {
+function Listing(props) {
+    const { state } = props.history?.location;
     const [books, setBooks] = useState([]);
+    const [startIndex, setStartIndex] = useState(11);
+    const [maxResults, setMaxResults] = useState(10);
+
 
     useEffect(() => {
-        async function loadBooks() {
-            const response = await api.get("volumes?q=harry%20potter");
-            console.log('respoense: ', response);
+        const loadBooks = async () => {
+            const response = await api.get(`volumes?q=${!!state ?  state: "harry%20potter"}`);
             const data = response.data.items.map(book => ({
                 ...book,
             }));
             
             setBooks(data);
         }
-        console.log(books);
         loadBooks();
 
     }, []);
+
+    const loadMore = async () => {
+        const response = await api.get(`volumes?q=${!!state ?  state: "harry%20potter"}?max-results=${maxResults}?start-index=${startIndex}`);
+        const data = response.data.items.map(book => ({
+            ...book,
+        }));
+
+        setBooks(oldArray => [...oldArray, ...data]);
+        setStartIndex(startIndex + 10);
+        setMaxResults(maxResults +  10);
+        console.log('books', books);
+    }
+
+
     return (
-      <div className="container">
+      <div className="container-listing">
           <ul className="bookList">
             {books.map(book => (
                 <li key={book.id}>
@@ -31,6 +47,9 @@ function Listing() {
                 </li>
             ))}
           </ul>
+          <div className="container-button">
+            <button className="load-more" onClick={loadMore}>LOAD MORE</button>
+          </div>
       </div>
     );
   }

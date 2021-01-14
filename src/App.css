@@ -18,7 +18,6 @@ blockquote {
 body {
   font-family: Roboto,  sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #FFFFFF;
  }
  
 li {
@@ -27,11 +26,7 @@ li {
 a {
   text-decoration: none;
 }
-img {
-  display: block;
-  max-width: 100%;
-  border-radius: 5px;
-}
+
 button {
   cursor:pointer;
 }

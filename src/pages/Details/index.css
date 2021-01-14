@@ -1,6 +1,7 @@
 .container {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 900px; 
+    background:#FFFFFF; 
 }
 
 .container-sales {
@@ -19,6 +20,9 @@
 
 .thumbnail {
     grid-area: thumbnail;
+    align-self: center;
+    display: block;
+    max-width: 80px;
 }
 
 .pages {
@@ -45,8 +49,12 @@
     grid-area: container-price;
     display: grid;
     grid-template-areas: 
-    "price price ratting";
+    "price ratting ratting";
     grid-template-columns: repeat(2, 100px);
+}
+
+.flex {
+    display: flex;
 }
 
 
@@ -57,16 +65,18 @@
 
 .ratting {
     grid-area:ratting;
+    align-self: center;
 }
 
 .container-buy {
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(3, 1fr);
     grid-area: container-buy;
     display: grid;
     grid-template-areas: 
     "... buy like";
     height: 43px;
     gap: 5px;
+    
 }
 
 .buy {
@@ -76,8 +86,13 @@
     border: none;
     width: 100px;
     border-radius: 50px;
+    box-shadow: 1px 1px 1px #888888;
     /* justify-self: end; */
     /* max-height: 50px; */
+}
+
+.buy a {
+    color: #ffffff;
 }
 
 .like {
@@ -88,6 +103,7 @@
     max-height: 40px;
     max-width: 45px;
     border-radius: 50px;
+    box-shadow: 0.5px 0.5px 0.5px #888888;
     /* border-radius: 30%; */
 }
 
