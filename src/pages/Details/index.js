@@ -29,7 +29,7 @@ function Details(props) {
     }
 
     useEffect(() => {
-        async function loadBook() {
+        const loadBook = async () => {
             const response = await api.get(`volumes/${props.match.params.id}`);
             const data = response.data;
             
