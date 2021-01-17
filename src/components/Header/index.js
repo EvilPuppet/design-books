@@ -3,36 +3,33 @@ import SearchInput from '../SearchInput/';
 import './index.css';
 import finder from '../../assets/finder.svg';
 import { Link } from 'react-router-dom';
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import leftArrow from '../../assets/left-arrow.svg';
 
 function Header(props) {
-    const ref = useRef();
-    const [backButton, setBackButton] = useState(false);
+    const location = useLocation();
     const [changeButton, setChangeButton] = useState(true);
     const history = useHistory();
 
-    const changeIcon = () => {
-        setBackButton(true);
-    } 
-
     const goBack = () => {
         history.goBack();
-        setBackButton(false);
+    }
+
+    const isHome = () => {
+      return location.pathname === '/';
     }
 
     const handleMouseHover = () => {
         setChangeButton(!changeButton);
       }
-    
 
     return (
       <header>
         <nav className="header">
           <ul>
             <li>
-            {!backButton ? <Link to="/listing">
-                <button className="burger" onClick={changeIcon}>
+            {isHome() ? <Link to="/listing">
+                <button className="burger">
                 <div className="risk"></div>
                 <div className="risk"></div>
                 <div className="risk"></div>
