@@ -32,7 +32,6 @@ function Listing(props) {
         setBooks(oldArray => [...oldArray, ...data]);
         setStartIndex(startIndex + 10);
         setMaxResults(maxResults +  10);
-        console.log('books', books);
     }
 
 

@@ -44,7 +44,7 @@ function SearchInput() {
     }
 
     useEffect(() => {
-        async function loadSearchBook() {
+        const loadSearchBook = async () => {
             if (searchTerm.length >= 3) {
                 
                 const response = await api.get(`volumes?q=${searchTerm}`);
